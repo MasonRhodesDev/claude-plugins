@@ -1,17 +1,25 @@
 {
   "name": "mrhodes",
-  "owner": { "name": "Mason Rhodes" },
+  "owner": {
+    "name": "Mason Rhodes"
+  },
   "description": "Mason Rhodes's Claude Code plugins, one catalog; each plugin lives in its own repository",
   "plugins": [
     {
       "name": "needs-you",
-      "source": { "source": "github", "repo": "MasonRhodesDev/needs-you" },
+      "source": {
+        "source": "github",
+        "repo": "MasonRhodesDev/needs-you"
+      },
       "description": "Claude ends every turn with a typed 'What I need from you' list; answer it from a band above the prompt and the answers send themselves"
     },
     {
       "name": "pm-loop",
-      "source": { "source": "github", "repo": "MasonRhodesDev/pm-loop" },
-      "description": "Event-driven, script-first PM loop for GitHub repos worked by Claude Code lanes"
+      "source": {
+        "source": "github",
+        "repo": "MasonRhodesDev/pm-loop"
+      },
+      "description": "Event-driven, script-first PM loop for GitHub repos worked by Claude Code lanes: poller/webhook → queue → one small headless PM tick; scripted pre-merge/merge, STATUS entries, fact-checks, review routing; fresh capped agents; local LLM for prose only."
     }
   ]
 }

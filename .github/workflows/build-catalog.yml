@@ -1,0 +1,43 @@
+name: Build catalog
+
+on:
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [scripts/build_catalog.py, .github/workflows/build-catalog.yml]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-catalog
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rebuild from repos tagged claude-plugin
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/build_catalog.py
+
+      - name: Validate
+        run: |
+          npm install -g @anthropic-ai/claude-code
+          claude plugin validate .
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet; then
+            echo "Catalog unchanged"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Rebuild catalog from repos tagged claude-plugin"
+          git push
