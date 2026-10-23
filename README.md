@@ -13,7 +13,6 @@ At the prompt of a terminal session:
 Then install what you want:
 
 ```
-/plugin install needs-you@mrhodes
 /plugin install pm-loop@mrhodes
 ```
 
