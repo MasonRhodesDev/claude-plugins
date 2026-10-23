@@ -6,14 +6,6 @@
   "description": "Mason Rhodes's Claude Code plugins, one catalog; each plugin lives in its own repository",
   "plugins": [
     {
-      "name": "needs-you",
-      "source": {
-        "source": "github",
-        "repo": "MasonRhodesDev/needs-you"
-      },
-      "description": "Claude ends every turn with a typed 'What I need from you' list; answer it from a band above the prompt and the answers send themselves"
-    },
-    {
       "name": "pm-loop",
       "source": {
         "source": "github",

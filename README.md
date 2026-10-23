@@ -26,7 +26,6 @@ Built by the Build catalog workflow; don't edit between the markers.
 <!-- catalog:begin -->
 | Plugin | Repository | What it does |
 |---|---|---|
-| `needs-you` | [MasonRhodesDev/needs-you](https://github.com/MasonRhodesDev/needs-you) | Claude ends every turn with a typed 'What I need from you' list; answer it from a band above the prompt and the answers send themselves |
 | `pm-loop` | [MasonRhodesDev/pm-loop](https://github.com/MasonRhodesDev/pm-loop) | Event-driven, script-first PM loop for GitHub repos worked by Claude Code lanes: poller/webhook → queue → one small headless PM tick; scripted pre-merge/merge, STATUS entries, fact-checks, review routing; fresh capped agents; local LLM for prose only. |
 <!-- catalog:end -->
 
