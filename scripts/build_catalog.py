@@ -1,13 +1,4 @@
 #!/usr/bin/env python3
-"""Rebuild .claude-plugin/marketplace.json and the README's plugin table.
-
-Lists the owner's public repositories tagged with the topic, and for each one
-reads its .claude-plugin/plugin.json (a plugin at the repo's root) or, failing
-that, its own .claude-plugin/marketplace.json (plugins in subfolders). Private
-repositories are never listed, whatever their topics.
-
-Needs `gh` signed in (GH_TOKEN in Actions). Writes files only when they change.
-"""
 
 import base64
 import json
