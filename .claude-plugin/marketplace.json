@@ -11,15 +11,7 @@
         "source": "github",
         "repo": "MasonRhodesDev/pm-loop"
       },
-      "description": "Event-driven, script-first PM loop for GitHub repos worked by Claude Code lanes: poller/webhook \u2192 queue \u2192 one small headless PM tick; scripted pre-merge/merge, STATUS entries, fact-checks, review routing; fresh capped agents; local LLM for prose only."
-    },
-    {
-      "name": "upstream-issues",
-      "source": {
-        "source": "github",
-        "repo": "MasonRhodesDev/upstream-issues"
-      },
-      "description": "Upstream bugs and limits go to your own private GitHub project as draft items, never to someone else's repo"
+      "description": "Event-driven, script-first PM loop for GitHub repos worked by Claude Code lanes: poller/webhook → queue → one small headless PM tick; scripted pre-merge/merge, STATUS entries, fact-checks, review routing; fresh capped agents; local LLM for prose only."
     }
   ]
 }
